@@ -71,6 +71,16 @@ chmod +x install.sh
 ./install.sh
 ```
 
+Antes de sair por ai plugando seu raspberry é necessário que você configure o IP do C&C no arquivo client/rev.sh, exatamente na linha 6:
+```
+C2='ipAddress_From_Command&Control'
+```
+
+Altere para o endereço IPv4 do seu servidor ou endereço FQDN do host, whatever. Exemplo:
+```
+C2='c2c.meucdois.com'
+``` 
+
 ### Configurando o C&C
 Dê um clone no repositório, no servidor você irá precisar apenas da parte do handler. 
 
@@ -98,9 +108,7 @@ No C&C, para verificar as portas abertas para conexão você pode utilizar o seg
 ./handler.sh status
 ```
 
-
 Repare que a conexão só vai ser estabelecida quando uma interface TUN subir em ambos os hosts. 
-
 
 #### Tools 
 Ferramentas que serão instaladas para agilizar a etapa dos ataques:
