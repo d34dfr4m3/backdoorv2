@@ -91,7 +91,7 @@ git clone https://github.com/d34dfr4m3/backdoorv2.git
 Realize a instação das dependências:
 
 ```
-cd handler
+cd server
 chmod +x install.sh
 ./install.sh
 ```
