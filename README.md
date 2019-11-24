@@ -41,6 +41,10 @@ Alterando o hostname do sistema:
 ```
 ~# echo 'server_2030' >  /etc/hostname
 ```
+Altere o arquivo **/etc/hosts** as linhas que possuem o antigo nome do servidor, atualize com o novo nome do servidor. 
+```
+127.0.1.1 	server2030
+```
 
 Adicionando o novo usuário ao grupo whell para execução do comando sudo:
 

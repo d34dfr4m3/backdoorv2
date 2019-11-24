@@ -60,6 +60,14 @@ echo "[+] Process:"
  getPID
 echo "[+] Ports:"
  netstat -nlp | grep -i socat
+ check=$(ifconfig  | grep -i tun  | wc -l)
+ if [ $check -ge 1 ];then
+   IFACE=$(ip addr show | grep -i 192.168.255 | tr -s  ' ' | cut -d ' ' -f 6)
+   echo "[-] Interface $IFACE is UP, we got a tunel"
+   netstat -p4n | grep -i socat
+ else
+   echo "[-] No host connected yet"
+ fi
 }
 
 
@@ -69,3 +77,4 @@ case $1 in
 	"status") status_prog ;;
 	*) usage ;;
 esac 
+
