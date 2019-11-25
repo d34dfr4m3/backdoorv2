@@ -1,7 +1,7 @@
 #!/bin/bash
 function package(){
   echo "[-] Installing packages"
-  apt-get install ssh socat vim screen netcat git python-pip libffi-dev libssl-dev nmap -y 
+  apt-get install ssh socat vim screen netcat git python-pip libffi-dev libssl-dev nmap  python-dev build-essential -y 
   # Make a function to check the version and if the packages are really ok
 }
 
@@ -21,8 +21,14 @@ function hackingTools(){
   responder
   ntlmrelay
   enum4linux
+  cme
 }
 
+function cme(){
+  echo "[+] Instaling CrackMapExec"
+  pip install crackmapexec
+  echo "[-] Done"
+}
 
 function enum4linux(){
   echo "[+] Instaling enum4Linux"
@@ -69,4 +75,3 @@ package
 directories
 crontabCreate
 hackingTools
-
