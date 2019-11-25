@@ -120,6 +120,7 @@ Ferramentas que serão instaladas para agilizar a etapa dos ataques:
 - Impacket https://github.com/SecureAuthCorp/impacket
 - enum4linux https://labs.portcullis.co.uk/tools/enum4linux/
 - nmap
+- CrackMapExec
 
 
 #### Extras:
